@@ -1,0 +1,1 @@
+**code snippets across `C` `C++` `Matlab` `Python` `CMake` `Shell` `PowerShell`**
