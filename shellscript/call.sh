@@ -1,6 +1,6 @@
 # !/bin/bash
 
-. D:/codewander/shellscript/func1.sh
+. D:/codesnippet/shellscript/func1.sh
 
 func1 "1" "2" "3"
 
