@@ -1,0 +1,73 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+
+% Optional: Hyperlink setup
+\usepackage[hidelinks]{hyperref}
+
+\def\IEEEkeywordsname{Keywords}
+
+\begin{document}
+
+\title{Title of Your IEEE Conference Paper Goes Here}
+
+\author{
+    \IEEEauthorblockN{First A. Author\IEEEauthorrefmark{1}, Second B. Author\IEEEauthorrefmark{2}, and Third C. Author\IEEEauthorrefmark{1}}
+    \IEEEauthorblockA{\IEEEauthorrefmark{1}Department of XYZ, University Name, City, Country\\
+    Email: \{first.author, third.author\}@university.edu}
+    \IEEEauthorblockA{\IEEEauthorrefmark{2}Company or Institution Name, City, Country\\
+    Email: second.author@company.com}
+}
+
+\maketitle
+
+\begin{abstract}
+This document outlines the general structure of an IEEE conference paper. The abstract should summarize the purpose, methods, key results, and conclusions of the paper in 150–250 words.
+\end{abstract}
+
+\begin{IEEEkeywords}
+IEEE, conference, LaTeX, template, research paper
+\end{IEEEkeywords}
+
+\section{Introduction}
+This section introduces the problem, motivation, and background. Cite prior work as needed~\cite{example_ref}. Keep the introduction concise but informative.
+
+\section{Related Work}
+Provide a brief overview of relevant prior studies. Explain how your work is similar or different.
+
+\section{Methodology}
+Describe your proposed methods in detail. This can include equations, models, and algorithms.
+
+\subsection{Subsection Example}
+You can break sections into subsections for clarity.
+
+\begin{equation}
+    y = mx + b
+\end{equation}
+
+\section{Results}
+Present key findings with supporting figures or tables.
+
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=0.45\textwidth]{example-image}}
+\caption{Example figure caption.}
+\label{fig}
+\end{figure}
+
+\section{Discussion}
+Interpret your results, discuss implications, limitations, and comparisons to other work.
+
+\section{Conclusion}
+Summarize the main contributions and suggest future research directions.
+
+\section*{Acknowledgment}
+Optional: acknowledge funding sources, contributors, or organizations.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

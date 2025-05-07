@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{titlesec}
+
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+% Custom colors for highlights
+\definecolor{noteBlue}{HTML}{007ACC}
+\definecolor{noteGray}{HTML}{555555}
+\definecolor{noteYellow}{HTML}{FFF2CC}
+
+% Custom heading style
+\titleformat{\section}{\large\bfseries\color{noteBlue}}{\thesection}{1em}{}
+
+% Highlight box
+\newtcolorbox{highlight}{
+  colback=noteYellow,
+  colframe=noteGray,
+  sharp corners,
+  boxrule=0.5pt,
+  left=6pt,
+  right=6pt,
+  top=4pt,
+  bottom=4pt
+}
+
+
+\title{Robotic Related Algorithm Introduction and Derivation}
+\author{Steve}
+\date{\today}
+
+\begin{document}
+ 
+\maketitle
+
+\section{Deep Q Learning}
+
+\textbf{Concept of Q-learning: } ...
+
+% \section*{Session Info}
+% \textbf{Date:} \today \\
+% \textbf{Topic:} Key Concept or Lecture Title \\
+% \textbf{Instructor:} Name of Speaker or Professor
+
+% \section{Main Concepts}
+
+% \begin{enumerate}
+%     \item Point 1 about the topic
+%     \item Important theorem or formula
+%     \item Applications or real-world examples
+% \end{enumerate}
+
+% \section{Equations and Definitions}
+
+% \textbf{Definition:} Here is a key definition.
+
+% \begin{equation}
+%     E = mc^2
+% \end{equation}
+
+% \begin{highlight}
+% Important result or formula goes here. Use this box to draw attention to key ideas.
+% \end{highlight}
+
+% \section{Questions or Thoughts}
+% \begin{itemize}
+%     \item Question 1 you had during lecture
+%     \item Clarification needed on concept
+% \end{itemize}
+
+% \section{Additional Notes}
+% Write any extra observations or references here. For example:
+% \begin{itemize}
+%     \item See also: \url{https://example.com/article}
+%     \item Compare this to what was said in last week's session
+% \end{itemize}
+
+\end{document}
