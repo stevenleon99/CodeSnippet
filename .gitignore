@@ -1,4 +1,5 @@
 build/*
+**/build/*
 .vscode/*
 *.exe
 **/__pycache__/*
