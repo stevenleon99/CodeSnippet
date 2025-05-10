@@ -1,0 +1,7 @@
+add_custom_target(generate_code
+    COMMAND my_codegen_tool input.idl output.cpp output.h
+    COMMENT "Generating C++ code from IDL..."
+)
+
+add_executable(MyApp main.cpp output.cpp)
+add_dependencies(MyApp generate_code)
