@@ -17,6 +17,10 @@ public:
 private:
     QLabel *statusLabel;
     QTableWidget *dataTable;
+
+public slots:
+    void onPowerOnClicked();
+    void onPowerOffClicked();
 };
 
 #endif // ARMSUBASSEMBLYWIDGET_H

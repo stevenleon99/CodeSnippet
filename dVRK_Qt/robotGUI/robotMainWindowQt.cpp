@@ -8,12 +8,37 @@
 #include <QTextEdit>
 #include <QPixmap>
 #include <QWidget>
+#include <QDebug>
 
 #include "armAssemblyWidgetQt.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent) {
+    // Set up the UI
     setupUI();
+    // Connect buttons to their respective slots
+    connect(btnPowerOn, &QPushButton::clicked, this, &MainWindow::onPowerOnClicked);
+    connect(btnPowerOff, &QPushButton::clicked, this, &MainWindow::onPowerOffClicked);
+    connect(btnHome, &QPushButton::clicked, this, &MainWindow::onHomeClicked);
+    for (auto &armWidget : ArmSubassemblyWidgetList) {
+        connect(btnPowerOn, &QPushButton::clicked, armWidget.second, &ArmSubassemblyWidget::onPowerOnClicked);
+        connect(btnPowerOff, &QPushButton::clicked, armWidget.second, &ArmSubassemblyWidget::onPowerOffClicked);
+    }
+}
+
+void MainWindow::onPowerOnClicked() {
+    logViewer->append("Power button clicked");
+    qDebug() << "Power button clicked";
+}
+
+void MainWindow::onPowerOffClicked() {
+    logViewer->append("Power Off button clicked");
+    qDebug() << "Power Off button clicked";
+}
+
+void MainWindow::onHomeClicked() {
+    logViewer->append("Home button clicked");
+    qDebug() << "Home button clicked";
 }
 
 void MainWindow::setupUI() {
@@ -41,6 +66,7 @@ void MainWindow::setupUI() {
     icon->setPixmap(QPixmap("../media/surgibot_logo.png").scaled(160, 160));
     icon->setAlignment(Qt::AlignCenter);
     leftPanel->addWidget(icon);
+    // -------------------------------------
 
     // --- Right Panel ---
     QVBoxLayout *rightPanel = new QVBoxLayout;
@@ -53,12 +79,12 @@ void MainWindow::setupUI() {
 
     // nested tab under tabArms
     QTabWidget* subTabArms = new QTabWidget;
-    ArmSubassemblyWidget *tabPSM1 = new ArmSubassemblyWidget("PSM1");
-    ArmSubassemblyWidget *tabPSM2 = new ArmSubassemblyWidget("PSM2");
-    ArmSubassemblyWidget *tabECM = new ArmSubassemblyWidget("ECM");
-    subTabArms->addTab(tabPSM1, "PSM1");
-    subTabArms->addTab(tabPSM2, "PSM2");
-    subTabArms->addTab(tabECM, "ECM");
+    ArmSubassemblyWidgetList["PSM1"] = new ArmSubassemblyWidget("PSM1");
+    ArmSubassemblyWidgetList["PSM2"] = new ArmSubassemblyWidget("PSM2");
+    ArmSubassemblyWidgetList["ECM"] = new ArmSubassemblyWidget("ECM");
+    subTabArms->addTab(ArmSubassemblyWidgetList["PSM1"], "PSM1");
+    subTabArms->addTab(ArmSubassemblyWidgetList["PSM2"], "PSM2");
+    subTabArms->addTab(ArmSubassemblyWidgetList["ECM"], "ECM");
     // Set layout for the tabArms container
     QVBoxLayout *armsLayout = new QVBoxLayout;
     armsLayout->setContentsMargins(0, 0, 0, 0);
@@ -74,6 +100,7 @@ void MainWindow::setupUI() {
         rightPanel->addWidget(tabWidget);
     }
     rightPanel->addWidget(logViewer);
+    // -------------------------------------
 
     mainLayout->addLayout(leftPanel, 1);
     mainLayout->addLayout(rightPanel, 4);

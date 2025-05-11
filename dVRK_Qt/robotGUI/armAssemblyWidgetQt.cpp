@@ -33,3 +33,11 @@ void ArmSubassemblyWidget::updateData(float pos, float vel, float torque) {
     dataTable->setItem(1, 1, new QTableWidgetItem(QString::number(vel)));
     dataTable->setItem(2, 1, new QTableWidgetItem(QString::number(torque)));
 }
+
+void ArmSubassemblyWidget::onPowerOnClicked() {
+    updateStatus("Powered On");
+}
+
+void ArmSubassemblyWidget::onPowerOffClicked() {
+    updateStatus("Powered Off");
+}
