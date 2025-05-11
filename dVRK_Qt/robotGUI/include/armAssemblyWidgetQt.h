@@ -2,6 +2,9 @@
 #define ARMSUBASSEMBLYWIDGET_H
 
 #include <QWidget>
+#include <QVector>
+#include "qcustomplot.h"
+
 
 class QLabel;
 class QTableWidget;
@@ -13,10 +16,14 @@ public:
 
     void updateStatus(const QString &status);
     void updateData(float pos, float vel, float torque);
+    void appendPlotPoint(float x, float y);
 
 private:
     QLabel *statusLabel;
     QTableWidget *dataTable;
+    QCustomPlot *plot;
+    QCPGraph *curve;
+    QVector<double> xData, yData;
 
 public slots:
     void onPowerOnClicked();

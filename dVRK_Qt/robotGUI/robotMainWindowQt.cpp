@@ -80,6 +80,12 @@ void MainWindow::setupUI() {
     // nested tab under tabArms
     QTabWidget* subTabArms = new QTabWidget;
     ArmSubassemblyWidgetList["PSM1"] = new ArmSubassemblyWidget("PSM1");
+    // initialize the example qcustomplot - draw a sine wave
+    for (int idx=0; idx<100; idx++) {
+        double pointX = idx * 0.1;
+        double pointY = std::sin(pointX);
+        ArmSubassemblyWidgetList["PSM1"]->appendPlotPoint(pointX, pointY);
+    }
     ArmSubassemblyWidgetList["PSM2"] = new ArmSubassemblyWidget("PSM2");
     ArmSubassemblyWidgetList["ECM"] = new ArmSubassemblyWidget("ECM");
     subTabArms->addTab(ArmSubassemblyWidgetList["PSM1"], "PSM1");

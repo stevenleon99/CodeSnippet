@@ -14,3 +14,8 @@
   - tabwidget2 (pid)
 - rightside: log screen
   - scrollable widget to display QDebug info
+
+**ArmSubassemblyWidget**
+- reuse the wdiget template to show PSM ECM SUJ
+- dynamically plot data [qcustomplot](https://www.qcustomplot.com/)
+- 
