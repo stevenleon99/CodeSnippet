@@ -1,4 +1,5 @@
 ![dvrk_console_json](media/image.png)
+![surgibot_qt_gui](media/surgibot_gui.png)
 
 **layout**
 - leftside: arm control menu
