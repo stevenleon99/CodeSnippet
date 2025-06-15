@@ -15,6 +15,6 @@ int main() {
     } else {
         std::cout << "Invalid email." << std::endl;
     }
-
+    
     return 0;
 }
