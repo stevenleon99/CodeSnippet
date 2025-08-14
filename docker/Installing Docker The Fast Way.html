@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>002 Installing Docker The Fast Way</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-weight: 400;
+            line-height: 1.4;
+            font-size: 1.2rem;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: auto;
+            object-fit: scale-down;
+        }
+
+        .layout-scroll-container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        .layout-container {
+            padding: 3.2rem 4.8rem;
+            word-break: break-word;
+            max-width: 86rem;
+            margin: 0 auto;
+        }
+
+        .container {
+            margin-top: 3.2rem;
+        }
+
+        .container-heading {
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: 0;
+            font-size: clamp(1.5rem, calc(1.5rem + (1.8 - 1.5) * calc((100vw - 36rem) / (144 - 36))), 1.8rem);
+            max-width: 36em;
+        }
+
+        .container-description {
+            margin-top: 4.8rem;
+        }
+    </style>
+</head>
+<body>
+<div class="layout-scroll-container">
+    <div class="layout-container">
+        <div class="container">
+            <div class="container-heading">002 Installing Docker The Fast Way</div>
+            <div class="container-description"><h4><strong>Installing Docker, Kubernetes, and a text editor</strong></h4><p>If you don't already have Docker installed, Docker already has some <a href="https://docs.docker.com/get-docker/" rel="noopener noreferrer" target="_blank">great guides on how to do it</a>, but if you already know which OS&nbsp;you want to install on, below are quick steps for downloading it. The videos after this Lecture are walkthroughs of installing Docker for each OS, then getting the GitHub repo, getting a code editor, and tweaking the command line if you want to. <strong>Feel free to skip any of this Section if you have Docker Desktop and Visual Studio Code already installed.</strong></p><p><strong>I always recommend </strong><a href="https://code.visualstudio.com/" rel="noopener noreferrer" target="_blank"><strong>Visual Studio Code (vscode)&nbsp;as your editor</strong></a> for all things Docker, Kubernetes, and DevOps. It's free for all OSs and has plugins to help you with many tools in this course.</p><h4>Installing on Windows 10 and Windows 11 (any Edition)</h4><p><a href="https://docs.docker.com/desktop/windows/install/" rel="noopener noreferrer" target="_blank">https://docs.docker.com/desktop/windows/install/</a></p><p>This is the best experience on Windows, which <a href="https://docs.microsoft.com/en-us/windows/wsl/install" rel="noopener noreferrer" target="_blank">uses WSL2</a>. If you're new to WSL2, it's the best way to run Linux on Windows, and Docker Desktop will walk you through enabling it. Docker can technically still work on Hyper-V with "Windows Containers," but most of this course focuses on Linux Containers, which WSL2 is great at.</p><p>After installing <a href="https://docs.docker.com/desktop/windows/install/" rel="noopener noreferrer" target="_blank">Docker Desktop for Windows</a>. I&nbsp;recommend installing a Windows Store <a href="https://www.microsoft.com/en-us/p/ubuntu/9pdxgncfsczv?rtc=1&amp;activetab=pivot:overviewtab" rel="noopener noreferrer" target="_blank">Ubuntu for WSL2</a> distro and using its shell in <a href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701#activetab=pivot:overviewtab" rel="noopener noreferrer" target="_blank">Windows Terminal</a> is the best CLI&nbsp;experience! Make sure to check your Docker Desktop settings to give it enough resources and enable all your WSL2 distros for Docker Desktop.</p><h4>Installing on Windows 7 or Windows 8</h4><p>Unfortunately, Microsoft's OS features for Docker Desktop don't work in these older versions. You'll need to use Hyper-V&nbsp;or install VirtualBox and manually setup a Linux VM. It's more involved than the other options, so I&nbsp;often recommend the easier option: using a DigitalOcean cloud server with my coupon code <a href="https://m.do.co/c/b813dfcad8d4" rel="noopener noreferrer" target="_blank">https://m.do.co/c/b813dfcad8d4</a> gets you $100 in credits over 60 days.</p><h4>Installing on Mac</h4><p><a href="https://docs.docker.com/desktop/mac/install/" rel="noopener noreferrer" target="_blank">https://docs.docker.com/desktop/mac/install/</a></p><p>You'll want to install <a href="https://docs.docker.com/desktop/mac/install/" rel="noopener noreferrer" target="_blank">Docker Desktop for Mac</a>, which is great.</p><h4>Installing on Linux Desktop</h4><p><strong>2022 update</strong>:&nbsp;Docker Desktop for Linux is here!</p><p><a href="https://docs.docker.com/desktop/linux/install/" rel="noopener noreferrer" target="_blank">https://docs.docker.com/desktop/linux/install/</a></p><h4>Installing on Linux Server</h4><p><a href="https://docs.docker.com/engine/install/" rel="noopener noreferrer" target="_blank">https://docs.docker.com/engine/install/</a></p><p><strong>Do *not* use&nbsp;your built-in default packages &nbsp;</strong><code><strong>apt/yum install docker.io</strong></code><strong>&nbsp;</strong> because those packages are old and not the Official Docker-Built packages.&nbsp;</p><p>I prefer to use <a href="https://get.docker.com/" rel="noopener noreferrer" target="_blank">Docker's automated script</a> to add their repository and install all dependencies: <code>curl -sSL https://get.docker.com/ | sh</code>&nbsp; but you can also install in a more manual method by following specific instructions that Docker provides&nbsp;<a href="https://docs.docker.com/engine/install/" rel="noopener noreferrer" target="_blank">for your Linux distribution</a>.</p><h4>Use Play With Docker</h4><p><a href="https://labs.play-with-docker.com/" rel="noopener noreferrer" target="_blank">https://labs.play-with-docker.com/</a></p><p>Maybe you don't have local admin, or maybe your machine doesn't have enough resources. Well, the best free option here is to use&nbsp;<a href="http://play-with-docker.com" rel="noopener noreferrer" target="_blank">play-with-docker.com</a>, which will run one or more Docker instances inside your browser, and give you a terminal to use it with. You can create multiple machines on it and even use the URL to share the session with others in a sort of collaborative experience. &nbsp;I&nbsp;highly recommend you check it out. &nbsp;Most of the lectures in this course can be used with "PWD," but the <strong>big limitation is it'll reset after 4 hours, at which time it'll delete your servers.</strong></p><h4>Use&nbsp;DigitalOcean as a remote Linux Server</h4><p>If you signup for a new account with DigitalOcean, my favorite "simpler"&nbsp;cloud, you can use a smaller server for months with my signup credit. <strong>Install Docker in the Cloud, via the above Linux links, and do the course without needing Docker locally. </strong>Thousands of students have done this:&nbsp;</p><p><a href="https://m.do.co/c/b813dfcad8d4" rel="noopener noreferrer" target="_blank">https://m.do.co/c/b813dfcad8d4</a> gets you $100 in credits over 60 days</p></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
