@@ -20,3 +20,5 @@ try:
 except subprocess.CalledProcessError as e:
     print(f"PowerShell script failed with return code {e.returncode}")
     print(e.output)
+
+exit(2)

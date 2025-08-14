@@ -108,3 +108,65 @@ System.ComponentModel.Win32Exception (267): An error occurred trying to start pr
 2025-08-13 21:04:11,847 INFO  - Starting C:\Users\Steve\AppData\Local\Programs\Python\Python39\python.exe  "D:\CodeSnippet\winsh\main.py"
 2025-08-13 21:04:11,866 INFO  - Started process 38676
 2025-08-13 21:04:11,876 DEBUG - Forwarding logs of the process System.Diagnostics.Process (python) to WinSW.RollingLogAppender
+2025-08-13 21:09:03,642 DEBUG - Starting WinSW in console mode
+2025-08-13 21:09:05,448 DEBUG - Starting WinSW in console mode
+2025-08-13 21:09:05,473 INFO  - Installing service 'downloadgithub (downloadgithub)'...
+2025-08-13 21:09:05,491 INFO  - Service 'downloadgithub (downloadgithub)' was installed successfully.
+2025-08-13 21:09:08,334 DEBUG - Starting WinSW in console mode
+2025-08-13 21:09:09,845 DEBUG - Starting WinSW in console mode
+2025-08-13 21:09:09,874 INFO  - Starting service 'downloadgithub (downloadgithub)'...
+2025-08-13 21:09:10,120 DEBUG - Starting WinSW in service mode
+2025-08-13 21:09:10,147 INFO  - Service 'downloadgithub (downloadgithub)' started successfully.
+2025-08-13 21:09:10,229 INFO  - Starting C:\Users\Steve\AppData\Local\Programs\Python\Python39\python.exe  "D:\CodeSnippet\winsh\main.py"
+2025-08-13 21:09:10,248 INFO  - Started process 24232
+2025-08-13 21:09:10,259 DEBUG - Forwarding logs of the process System.Diagnostics.Process (python) to WinSW.RollingLogAppender
+2025-08-13 21:13:29,445 DEBUG - Starting WinSW in console mode
+2025-08-13 21:13:31,064 DEBUG - Starting WinSW in console mode
+2025-08-13 21:13:31,092 INFO  - Starting service 'downloadgithub (downloadgithub)'...
+2025-08-13 21:13:31,338 DEBUG - Starting WinSW in service mode
+2025-08-13 21:13:31,363 INFO  - Service 'downloadgithub (downloadgithub)' started successfully.
+2025-08-13 21:13:31,446 INFO  - Starting C:\Users\Steve\AppData\Local\Programs\Python\Python39\python.exe  "D:\CodeSnippet\winsh\main.py"
+2025-08-13 21:13:31,465 INFO  - Started process 28028
+2025-08-13 21:13:31,476 DEBUG - Forwarding logs of the process System.Diagnostics.Process (python) to WinSW.RollingLogAppender
+2025-08-13 21:13:53,451 DEBUG - Starting WinSW in service mode
+2025-08-13 21:13:53,560 INFO  - Starting C:\Users\Steve\AppData\Local\Programs\Python\Python39\python.exe  "D:\CodeSnippet\winsh\main.py"
+2025-08-13 21:13:53,580 INFO  - Started process 31364
+2025-08-13 21:13:53,594 DEBUG - Forwarding logs of the process System.Diagnostics.Process (python) to WinSW.RollingLogAppender
+2025-08-13 21:13:54,499 DEBUG - Starting WinSW in console mode
+2025-08-13 21:13:55,919 DEBUG - Starting WinSW in console mode
+2025-08-13 21:13:55,947 INFO  - Starting service 'downloadgithub (downloadgithub)'...
+2025-08-13 21:13:56,202 DEBUG - Starting WinSW in service mode
+2025-08-13 21:13:56,228 INFO  - Service 'downloadgithub (downloadgithub)' started successfully.
+2025-08-13 21:13:56,315 INFO  - Starting C:\Users\Steve\AppData\Local\Programs\Python\Python39\python.exe  "D:\CodeSnippet\winsh\main.py"
+2025-08-13 21:13:56,335 INFO  - Started process 1632
+2025-08-13 21:13:56,346 DEBUG - Forwarding logs of the process System.Diagnostics.Process (python) to WinSW.RollingLogAppender
+2025-08-13 21:14:04,190 DEBUG - Starting WinSW in console mode
+2025-08-13 21:14:04,699 DEBUG - Starting WinSW in service mode
+2025-08-13 21:14:04,810 INFO  - Starting C:\Users\Steve\AppData\Local\Programs\Python\Python39\python.exe  "D:\CodeSnippet\winsh\main.py"
+2025-08-13 21:14:04,829 INFO  - Started process 38276
+2025-08-13 21:14:04,840 DEBUG - Forwarding logs of the process System.Diagnostics.Process (python) to WinSW.RollingLogAppender
+2025-08-13 21:14:05,416 FATAL - An error occurred trying to start process 'D:\CodeSnippet\winsh\downloadgithub.exe' with working directory 'D:\CodeSnippet\winsh'. The operation was canceled by the user.
+2025-08-13 21:14:07,457 DEBUG - Starting WinSW in service mode
+2025-08-13 21:14:07,566 INFO  - Starting C:\Users\Steve\AppData\Local\Programs\Python\Python39\python.exe  "D:\CodeSnippet\winsh\main.py"
+2025-08-13 21:14:07,585 INFO  - Started process 34772
+2025-08-13 21:14:07,596 DEBUG - Forwarding logs of the process System.Diagnostics.Process (python) to WinSW.RollingLogAppender
+2025-08-13 21:14:15,953 DEBUG - Starting WinSW in service mode
+2025-08-13 21:14:16,062 INFO  - Starting C:\Users\Steve\AppData\Local\Programs\Python\Python39\python.exe  "D:\CodeSnippet\winsh\main.py"
+2025-08-13 21:14:16,081 INFO  - Started process 6340
+2025-08-13 21:14:16,092 DEBUG - Forwarding logs of the process System.Diagnostics.Process (python) to WinSW.RollingLogAppender
+2025-08-13 21:14:18,708 DEBUG - Starting WinSW in service mode
+2025-08-13 21:14:18,815 INFO  - Starting C:\Users\Steve\AppData\Local\Programs\Python\Python39\python.exe  "D:\CodeSnippet\winsh\main.py"
+2025-08-13 21:14:18,834 INFO  - Started process 1324
+2025-08-13 21:14:18,845 DEBUG - Forwarding logs of the process System.Diagnostics.Process (python) to WinSW.RollingLogAppender
+2025-08-13 21:14:40,849 DEBUG - Starting WinSW in service mode
+2025-08-13 21:14:41,002 INFO  - Starting C:\Users\Steve\AppData\Local\Programs\Python\Python39\python.exe  "D:\CodeSnippet\winsh\main.py"
+2025-08-13 21:14:41,031 INFO  - Started process 38404
+2025-08-13 21:14:41,046 DEBUG - Forwarding logs of the process System.Diagnostics.Process (python) to WinSW.RollingLogAppender
+2025-08-13 21:14:52,339 DEBUG - Starting WinSW in service mode
+2025-08-13 21:14:52,447 INFO  - Starting C:\Users\Steve\AppData\Local\Programs\Python\Python39\python.exe  "D:\CodeSnippet\winsh\main.py"
+2025-08-13 21:14:52,467 INFO  - Started process 28620
+2025-08-13 21:14:52,478 DEBUG - Forwarding logs of the process System.Diagnostics.Process (python) to WinSW.RollingLogAppender
+2025-08-13 21:15:06,396 DEBUG - Starting WinSW in console mode
+2025-08-13 21:15:08,722 DEBUG - Starting WinSW in console mode
+2025-08-13 21:15:08,749 INFO  - Stopping service 'downloadgithub (downloadgithub)'...
+2025-08-13 21:15:08,757 INFO  - Service 'downloadgithub (downloadgithub)' has already stopped.

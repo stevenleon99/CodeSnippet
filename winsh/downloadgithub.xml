@@ -9,4 +9,5 @@
   <log mode="roll"></log>
   <logpath>D:\CodeSnippet\winsh\logs</logpath>
   <workingdirectory>D:\CodeSnippet\winsh</workingdirectory>
+  <onfailure action="restart" delay="10 sec"/>
 </service>
