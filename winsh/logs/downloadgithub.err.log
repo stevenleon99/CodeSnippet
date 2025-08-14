@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "main.py", line 16, in <module>
+    result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+  File "subprocess.py", line 503, in run
+  File "subprocess.py", line 1130, in communicate
+  File "subprocess.py", line 1504, in _communicate
+  File "threading.py", line 1029, in join
+  File "threading.py", line 1045, in _wait_for_tstate_lock
+KeyboardInterrupt
+[PYI-33652:ERROR] Failed to execute script 'main' due to unhandled exception!

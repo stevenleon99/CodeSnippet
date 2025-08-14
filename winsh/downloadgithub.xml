@@ -2,10 +2,7 @@
   <id>downloadgithub</id>
   <name>downloadgithub</name>
   <description>This service downloads a GitHub repository.</description>
-  <executable>C:\Users\Steve\AppData\Local\Programs\Python\Python39\python.exe</executable>
-  <arguments>
-    <argument>"D:\CodeSnippet\winsh\main.py"</argument>
-  </arguments>
+  <executable>D:\CodeSnippet\winsh\dist\main.exe</executable>
   <log mode="roll"></log>
   <logpath>D:\CodeSnippet\winsh\logs</logpath>
   <workingdirectory>D:\CodeSnippet\winsh</workingdirectory>

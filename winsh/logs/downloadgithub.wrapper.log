@@ -170,3 +170,36 @@ System.ComponentModel.Win32Exception (267): An error occurred trying to start pr
 2025-08-13 21:15:08,722 DEBUG - Starting WinSW in console mode
 2025-08-13 21:15:08,749 INFO  - Stopping service 'downloadgithub (downloadgithub)'...
 2025-08-13 21:15:08,757 INFO  - Service 'downloadgithub (downloadgithub)' has already stopped.
+2025-08-13 21:29:26,319 DEBUG - Starting WinSW in console mode
+2025-08-13 21:29:28,227 DEBUG - Starting WinSW in console mode
+2025-08-13 21:29:28,253 INFO  - Installing service 'downloadgithub (downloadgithub)'...
+2025-08-13 21:29:28,271 INFO  - Service 'downloadgithub (downloadgithub)' was installed successfully.
+2025-08-13 21:29:33,050 DEBUG - Starting WinSW in console mode
+2025-08-13 21:29:34,990 DEBUG - Starting WinSW in console mode
+2025-08-13 21:29:35,018 INFO  - Starting service 'downloadgithub (downloadgithub)'...
+2025-08-13 21:29:35,270 DEBUG - Starting WinSW in service mode
+2025-08-13 21:29:35,295 INFO  - Service 'downloadgithub (downloadgithub)' started successfully.
+2025-08-13 21:29:35,370 INFO  - Starting D:\CodeSnippet\winsh\dist\main.exe 
+2025-08-13 21:29:35,390 INFO  - Started process 26148
+2025-08-13 21:29:35,401 DEBUG - Forwarding logs of the process System.Diagnostics.Process (main) to WinSW.RollingLogAppender
+2025-08-13 21:29:57,808 DEBUG - Starting WinSW in service mode
+2025-08-13 21:29:57,909 INFO  - Starting D:\CodeSnippet\winsh\dist\main.exe 
+2025-08-13 21:29:57,927 INFO  - Started process 34620
+2025-08-13 21:29:57,937 DEBUG - Forwarding logs of the process System.Diagnostics.Process (main) to WinSW.RollingLogAppender
+2025-08-13 21:30:09,442 DEBUG - Starting WinSW in service mode
+2025-08-13 21:30:09,542 INFO  - Starting D:\CodeSnippet\winsh\dist\main.exe 
+2025-08-13 21:30:09,560 INFO  - Started process 3552
+2025-08-13 21:30:09,570 DEBUG - Forwarding logs of the process System.Diagnostics.Process (main) to WinSW.RollingLogAppender
+2025-08-13 21:30:21,064 DEBUG - Starting WinSW in service mode
+2025-08-13 21:30:21,165 INFO  - Starting D:\CodeSnippet\winsh\dist\main.exe 
+2025-08-13 21:30:21,183 INFO  - Started process 32832
+2025-08-13 21:30:21,194 DEBUG - Forwarding logs of the process System.Diagnostics.Process (main) to WinSW.RollingLogAppender
+2025-08-13 21:30:26,908 DEBUG - Starting WinSW in console mode
+2025-08-13 21:30:28,643 DEBUG - Starting WinSW in console mode
+2025-08-13 21:30:28,673 INFO  - Stopping service 'downloadgithub (downloadgithub)'...
+2025-08-13 21:30:28,679 INFO  - Service 'downloadgithub (downloadgithub)' stopped successfully.
+2025-08-13 21:30:28,680 INFO  - Stopping downloadgithub
+2025-08-13 21:30:28,680 DEBUG - ProcessKill 32832
+2025-08-13 21:30:28,683 DEBUG - Stopping process 32832...
+2025-08-13 21:30:29,027 DEBUG - Process 32832 canceled with code 1.
+2025-08-13 21:30:29,030 INFO  - Finished downloadgithub
