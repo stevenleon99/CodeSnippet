@@ -225,4 +225,5 @@ if __name__ == "__main__":
     host = BIND_HOST
     port = BIND_PORT
     log.info("Starting GUI Launcher Agent on %s:%s", host, port)
-    uvicorn.run("gui_launcher_agent:app", host=host, port=port, log_level="info")
+    # $env:APP_AGENT_SECRET = "SuperSecret-ChangeMe"
+    uvicorn.run("gui_launcher_agent:app", host=host, port=port, workers=1, loop="asyncio", http="h11", log_level="info")
