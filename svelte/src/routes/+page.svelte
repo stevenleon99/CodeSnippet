@@ -1,6 +1,7 @@
 <script lang="ts">
     import User from '$lib/component/user.svelte';
     import RandomNumber from '$lib/component/randomNumber.svelte';
+	import Counter from '$lib/component/counter.svelte';
 
     let firstname = $state('Steve');
     let lastname = $state('Josh');
@@ -13,7 +14,9 @@
         if (username || firstname ) {
             console.log('username or firstname changed');
         }
-    });     
+    });
+    
+    // effect and effect.pre
 </script>
 
 <!-- $prop() is able to pass props to components from parent to child. -->
@@ -27,6 +30,8 @@
 
 <h1>{username || fullName}</h1>
 <p>{@html bio}</p>
+
+<Counter />
 
 <style>
 
