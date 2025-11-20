@@ -2,6 +2,7 @@
     import User from '$lib/component/user.svelte';
     import RandomNumber from '$lib/component/randomNumber.svelte';
 	import Counter from '$lib/component/counter.svelte';
+    import Button from '$lib/component/button.svelte';
 
     let firstname = $state('Steve');
     let lastname = $state('Josh');
@@ -15,8 +16,8 @@
             console.log('username or firstname changed');
         }
     });
-    
     // effect and effect.pre
+
 </script>
 
 <!-- $prop() is able to pass props to components from parent to child. -->
@@ -32,9 +33,12 @@
 <p>{@html bio}</p>
 
 <Counter />
+<div>
+    <Button text = "start" level = "info" />
+</div>
+
 
 <style>
-
     h1{
         color:cornflowerblue;
     }
