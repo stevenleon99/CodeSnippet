@@ -1,45 +1,50 @@
 <script lang="ts">
-    import User from '$lib/component/user.svelte';
-    import RandomNumber from '$lib/component/randomNumber.svelte';
-	import Counter from '$lib/component/counter.svelte';
-    import Button from '$lib/component/button.svelte';
-
-    let firstname = $state('Steve');
-    let lastname = $state('Josh');
-    let fullName = $derived.by(() => `${firstname} ${lastname}`); // derived variable has memory (compared to function), which means it only updates onnce if two elements depend on it and its value doesn't change.
-    let username = $state('xxxxxxxxxx');
-    let src = 'https://cdn.pixabay.com/photo/2017/07/23/21/29/globus-2532875_1280.png';
-    let bio = 'Hello, <b>this</b> is in bold';
-
-    $effect(() => {
-        if (username || firstname ) {
-            console.log('username or firstname changed');
+    const people = {
+        firstName: 'John',
+        lastName: 'Doe',
+        occupations: [],
+        get fullName() {
+            return `${this.firstName} ${this.lastName}`; // custom getter function
+        },
+        set fullName(name: string) {                     // custom setter function
+            const parts = name.split(' ');
+            this.firstName = parts[0];
+            this.lastName = parts[1];
+        },
+        set occupation(value: String) {
+            this.occupations.push(value);
+            console.log(this.occupations);
         }
-    });
-    // effect and effect.pre
+    };
+    console.log(people.fullName);
+    people.fullName = 'Jane Smith';
+    console.log(people.fullName);
+    people.occupation = 'Developer';
+    people.occupation = 'Designer';
+
+    const handler = {
+        get(people, prop) {
+            return prop in people ? people[prop] : 'NAN'; // intercept property access
+        },
+        set(people, prop, value) {
+            console.log(`Setting ${prop} to ${value}`);
+            people[prop] = value;
+            return true;
+        }
+    };
+    // use new for constructors that are not callable as plain functions
+    const proxy = new Proxy(people, handler); // create a proxy to access the object via proxy
+    proxy.firstName = 'FirstName Changed'; // Intercepted by proxy
+    console.log(proxy.firstName); // Accessing via proxy
 
 </script>
 
-<!-- $prop() is able to pass props to components from parent to child. -->
-<User data="hello" />
-<RandomNumber />
-
-
-<input bind:value={username} />
-<input bind:value={firstname} />
-<input bind:value={lastname} />
-
-<h1>{username || fullName}</h1>
-<p>{@html bio}</p>
-
-<Counter />
-<div>
-    <Button text = "start" level = "info" />
-</div>
 
 
 <style>
-    h1{
-        color:cornflowerblue;
+    :global {
+            body {
+            background-color: #222;
+        }
     }
 </style>
