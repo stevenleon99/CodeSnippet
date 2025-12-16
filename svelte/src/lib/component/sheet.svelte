@@ -5,7 +5,7 @@
     // console.log(alphabetToNumber("A")); // 1
     // console.log(numberToAlphabet(1)); // A
 
-    let {data}: {data: cell[][]} = $props();
+    let {data = $bindable([])}: {data: cell[][]} = $props();
 
 	let editedCell: string | null = $state(null);
 	let selectedCell: string | null = $state(null);
@@ -19,6 +19,21 @@
 	function init(el: HTMLInputElement) {
 		el.focus();
 		el.select();
+	}
+
+
+	// sheet is mutating the data which is not good
+	function setCell(row:number, column:number, prop: 'value'|'bgColor'|'color', value: string) {
+		if(data[row]) {
+			if (data[row][column]) {
+				data[row][column][prop] = value;
+			} else {
+				data[row][column] = {[prop]: value};
+			}
+		} else {
+			data[row] = [];
+			data[row][column] = {[prop]: value};
+		}
 	}
     console.log({numRows, numCols});
 </script>
@@ -67,7 +82,11 @@
 								use:init
 								type="text" value={cellData?.value || ''}
 								style:background-color={cellData?.bgColor}
-								style:color={cellData?.color}>
+								style:color={cellData?.color}
+								oninput={(e) => {
+									console.log(e);
+									setCell(row-1, column-1, 'value', e.currentTarget.value);
+								}}>
 							{/if}
 						{/if}
 					</svelte:element>
