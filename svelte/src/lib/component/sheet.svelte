@@ -22,7 +22,7 @@
 	}
 
 
-	// sheet is mutating the data which is not good
+	// sheet is mutating the data which is not good - > {data = $bindable([])}
 	function setCell(row:number, column:number, prop: 'value'|'bgColor'|'color', value: string) {
 		if(data[row]) {
 			if (data[row][column]) {
