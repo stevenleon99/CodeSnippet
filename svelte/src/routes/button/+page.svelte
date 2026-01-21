@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Button from '$lib/component/button.svelte';
+    import Button from '$lib/component/button_.svelte';
     let buttonElement: Button;
 
     $effect(() => {
