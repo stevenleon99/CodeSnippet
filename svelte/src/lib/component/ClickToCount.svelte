@@ -8,7 +8,7 @@ const counter = createCounter();
 
 <div class="wrapper">
 	<!-- instead of counter.value, use this method to get the reactive value -->
-	<h2>{counter.getValue()}</h2> 
+	<h2>{counter.value}</h2> 
 	<Button --buttonBgColor="#000" onclick={counter.increment}>Increment</Button>
 	<Button --buttonBgColor="#fff" --buttonTextColor="#000" onclick={counter.reset}>Reset</Button>
 </div>

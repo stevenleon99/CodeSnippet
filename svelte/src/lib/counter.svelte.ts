@@ -2,8 +2,9 @@ function createCounter() {
     let count = $state(0);
 
     return {
-        value:count,
-        getValue: () => count,
+        get value() {
+            return count;
+        },
         increment: () => {
             count+=1;
         },
