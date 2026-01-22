@@ -2,7 +2,7 @@
     import User from '$lib/component/user.svelte';
     import RandomNumber from '$lib/component/randomNumber.svelte';
 	import Counter from '$lib/component/counter.svelte';
-    import Button from '$lib/component/button.svelte';
+    import Button from '$lib/component/button_.svelte';
 
     let firstname = $state('Steve');
     let lastname = $state('Josh');

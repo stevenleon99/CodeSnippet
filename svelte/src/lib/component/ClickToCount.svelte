@@ -1,16 +1,19 @@
 <script lang="ts">
 import Button from "./Button.svelte";
 import createCounter from "$lib/counter.svelte";
+import Counter from "$lib/counter.svelte";
+import { getShareCount, incrementShareCount,resetShareCount } from "$lib/shareCount.svelte";
 
 const counter = createCounter();
+const counter2 = new Counter();
 
 </script>
 
 <div class="wrapper">
 	<!-- instead of counter.value, use this method to get the reactive value -->
-	<h2>{counter.value}</h2> 
-	<Button --buttonBgColor="#000" onclick={counter.increment}>Increment</Button>
-	<Button --buttonBgColor="#fff" --buttonTextColor="#000" onclick={counter.reset}>Reset</Button>
+	<h2>{getShareCount()}</h2> 
+	<Button --buttonBgColor="#000" onclick={incrementShareCount}>Increment</Button>
+	<Button --buttonBgColor="#fff" --buttonTextColor="#000" onclick={resetShareCount}>Reset</Button>
 </div>
 
 <style>

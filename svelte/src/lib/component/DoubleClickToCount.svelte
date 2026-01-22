@@ -1,5 +1,7 @@
 <script lang="ts">
 	import Button from './Button.svelte';
+	import { getShareCount, incrementShareCount,resetShareCount } from "$lib/shareCount.svelte";
+
 	let count = $state(0);
 	function increment() {
 		count += 1;
@@ -10,9 +12,9 @@
 </script>
 
 <div class="wrapper">
-	<h2>{count}</h2>
-	<Button --buttonBgColor="#000" ondblclick={increment}>Increment</Button>
-	<Button --buttonBgColor="#fff" --buttonTextColor="#000" onclick={reset}>Reset</Button>
+	<h2>{getShareCount()}</h2>
+	<Button --buttonBgColor="#000" ondblclick={incrementShareCount}>Increment</Button>
+	<Button --buttonBgColor="#fff" --buttonTextColor="#000" onclick={resetShareCount}>Reset</Button>
 </div>
 
 <style>
