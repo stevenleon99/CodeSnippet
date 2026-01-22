@@ -1,5 +1,6 @@
 import { browser } from "$app/environment";
 import { createSubscriber } from "svelte/reactivity"
+import { on } from "svelte/events";
 
 class scrollY {
     #subscriber
