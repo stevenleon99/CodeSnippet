@@ -4,8 +4,19 @@
 	import Counters from '$lib/component/Counters.svelte';
 </script>
 
-<ClickToCount />
-<DoubleClickToCount />
+<div>
+	<Counters>
+		<ClickToCount />
+		<ClickToCount />
+	</Counters>
+
+	<Counters>
+		<ClickToCount />
+		<ClickToCount />
+	</Counters>
+</div>
+
+
 
 <style>
 	:global {

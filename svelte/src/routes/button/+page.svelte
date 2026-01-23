@@ -1,5 +1,6 @@
 <script lang="ts">
     import Button from '$lib/component/button_.svelte';
+    import MouseTracker from '$lib/component/mouseTracker.svelte';
     let buttonElement: Button;
 
     $effect(() => {
@@ -22,4 +23,6 @@
         console.log("click from div")}}>
         <Button bind:this={buttonElement} text="Click Me!" level="primary" size="large" shadow={true} onLeftHover={() => console.log("Hovered on left side")} />
     </div>
+
+    <MouseTracker />
 </div>

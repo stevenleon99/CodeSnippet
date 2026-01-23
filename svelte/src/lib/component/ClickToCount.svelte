@@ -1,11 +1,15 @@
 <script lang="ts">
-import Button from "./Button.svelte";
-import createCounter from "$lib/counter.svelte";
-import Counter from "$lib/counter.svelte";
-import { getShareCount, incrementShareCount,resetShareCount } from "$lib/shareCount.svelte";
+	import Button from "./Button.svelte";
+	import createCounter from "$lib/counter.svelte";
+	import Counter from "$lib/counter.svelte";
+	import { getShareCount, incrementShareCount,resetShareCount } from "$lib/shareCount.svelte";
+		import { getContext } from "svelte";
 
-const counter = createCounter();
-const counter2 = new Counter();
+	const counter = createCounter();
+	const counter2 = new Counter();
+
+	let count = getContext<number>('count');
+	console.log('Initial shared count:', count);
 
 </script>
 
