@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://stevenleon99.github.io',
-	base: '/codesnippet',
+	base: '/CodeSnippet',
 	integrations: [
 		starlight({
 			title: 'Code Snippets',
