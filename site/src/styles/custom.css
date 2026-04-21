@@ -1,0 +1,200 @@
+/* Teal-to-emerald theme for Code Snippets */
+
+:root {
+  --sl-color-accent-low: #ccfbf1;
+  --sl-color-accent: #0d9488;
+  --sl-color-accent-high: #064e3b;
+  --sl-color-white: #1a1a2e;
+  --sl-color-gray-1: #3d3d5c;
+  --sl-color-gray-2: #53536e;
+  --sl-color-gray-3: #8888a0;
+  --sl-color-gray-4: #b8b8cc;
+  --sl-color-gray-5: #d4d4e0;
+  --sl-color-gray-6: #ededf4;
+  --sl-color-black: #fafafe;
+}
+
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #042f2e;
+  --sl-color-accent: #2dd4bf;
+  --sl-color-accent-high: #99f6e4;
+  --sl-color-white: #fafafe;
+  --sl-color-gray-1: #ededf4;
+  --sl-color-gray-2: #d4d4e0;
+  --sl-color-gray-3: #8888a0;
+  --sl-color-gray-4: #53536e;
+  --sl-color-gray-5: #3d3d5c;
+  --sl-color-gray-6: #1a1a2e;
+  --sl-color-black: #0f0f1a;
+}
+
+/* Gradient accent bar under site header */
+header.header {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, #0d9488, #059669, #10b981, #34d399) 1;
+}
+
+/* --- Splash page hero enhancements --- */
+.sl-flex.hero {
+  position: relative;
+}
+
+.sl-flex.hero::before {
+  content: '';
+  position: absolute;
+  inset: -2rem;
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.06), rgba(16, 185, 129, 0.04));
+  border-radius: 1rem;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* --- Interactive card styles --- */
+.sl-flex.sl-splash-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  cursor: default;
+}
+
+.sl-flex.sl-splash-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(13, 148, 136, 0.12);
+  border-color: var(--sl-color-accent);
+}
+
+:root[data-theme='dark'] .sl-flex.sl-splash-card:hover {
+  box-shadow: 0 8px 24px rgba(45, 212, 191, 0.1);
+}
+
+/* Card icon accent */
+.sl-flex.sl-splash-card svg {
+  transition: color 0.2s ease;
+}
+
+.sl-flex.sl-splash-card:hover svg {
+  color: var(--sl-color-accent);
+}
+
+/* --- Tag / badge styles --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.25em 0.7em;
+  border-radius: 9999px;
+  font-size: var(--sl-text-sm);
+  font-weight: 600;
+  background: var(--sl-color-accent-low);
+  color: var(--sl-color-accent);
+  border: 1px solid var(--sl-color-accent);
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.badge:hover {
+  background: var(--sl-color-accent);
+  color: var(--sl-color-white);
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* --- Category link cards --- */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.category-card {
+  display: block;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--sl-color-gray-5);
+  background: var(--sl-color-gray-6);
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 148, 136, 0.1);
+  border-color: var(--sl-color-accent);
+}
+
+:root[data-theme='dark'] .category-card {
+  border-color: var(--sl-color-gray-5);
+  background: var(--sl-color-gray-6);
+}
+
+.category-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  color: var(--sl-color-gray-1);
+}
+
+.category-card:hover h3 {
+  color: var(--sl-color-accent);
+}
+
+.category-card p {
+  margin: 0;
+  font-size: var(--sl-text-sm);
+  color: var(--sl-color-gray-3);
+  line-height: 1.5;
+}
+
+.category-card .card-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.category-card .card-tag {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  background: var(--sl-color-accent-low);
+  color: var(--sl-color-accent);
+  font-weight: 500;
+}
+
+/* --- Quick-start code block enhancement --- */
+.sl-markdown-content pre {
+  border-radius: 0.75rem;
+  border: 1px solid var(--sl-color-gray-5);
+}
+
+/* --- Smooth scrolling --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Search highlight pulse --- */
+mark {
+  background: rgba(13, 148, 136, 0.25);
+  border-radius: 0.2em;
+  padding: 0.1em 0.2em;
+}
+
+/* --- Responsive tweaks --- */
+@media (max-width: 50rem) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+}

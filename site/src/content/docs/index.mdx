@@ -3,7 +3,7 @@ title: Code Snippets
 description: A collection of code snippets across C, C++, Matlab, Python, CMake, Shell, PowerShell and more.
 template: splash
 hero:
-  tagline: Browse code snippets across multiple languages and domains.
+  tagline: Practical code snippets across 10+ languages — from embedded systems to AI and everything in between.
   actions:
     - text: Browse Snippets
       link: /introduction/
@@ -16,29 +16,107 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Categories
+## By the Numbers
 
-<CardGrid sy={3}>
-  <Card title="AI & Machine Learning" icon="star">
-    AI model deployment, ML tools, reinforcement learning, and transformer implementations.
+<CardGrid stagger>
+  <Card title="30+ Snippets" icon="puzzle">
+    Curated code examples across algorithms, systems programming, ML, web development, and more.
   </Card>
-  <Card title="Algorithms" icon="puzzle">
-    Data structures, dynamic programming, graph algorithms, and robotics control.
+  <Card title="10+ Languages" icon="code">
+    C, C++, Python, MATLAB, Rust, CMake, Shell, PowerShell, LaTeX, JavaScript/TypeScript — and growing.
   </Card>
-  <Card title="C/C++ Development" icon="setting">
-    Boost, Eigen, CMake, concurrency, smart pointers, and design patterns.
+  <Card title="8 Categories" icon="folder">
+    Organized by domain — from embedded systems and robotics to DevOps and machine learning.
   </Card>
-  <Card title="Web & Servers" icon="globe">
-    Docker, RabbitMQ, miniserver, and Svelte web applications.
-  </Card>
-  <Card title="Embedded & Systems" icon="cpu">
-    STM32 microcontrollers and Qt desktop applications.
-  </Card>
-  <Card title="Scripting & Tools" icon="terminal">
-    Python, Rust, Git, shell scripting, and test automation.
+  <Card title="Copy-Paste Ready" icon="check-circle">
+    Every snippet is self-contained with clear descriptions so you can use it immediately.
   </Card>
 </CardGrid>
 
+## Explore by Category
+
+<a class="category-card" href="/codesnippet/ai_model_deploy_test/">
+  <h3>AI & Machine Learning</h3>
+  <p>Model deployment, reinforcement learning, and transformer architectures.</p>
+  <div class="card-items">
+    <span class="card-tag">Deploy</span>
+    <span class="card-tag">RL</span>
+    <span class="card-tag">Transformer</span>
+    <span class="card-tag">PyTorch</span>
+  </div>
+</a>
+
+<a class="category-card" href="/codesnippet/algorithm/">
+  <h3>Algorithms</h3>
+  <p>Data structures, dynamic programming, graph algorithms, and robotics control.</p>
+  <div class="card-items">
+    <span class="card-tag">TopoSort</span>
+    <span class="card-tag">Gravity</span>
+  </div>
+</a>
+
+<a class="category-card" href="/codesnippet/boost/">
+  <h3>C/C++ Development</h3>
+  <p>Boost, Eigen, CMake, concurrency, smart pointers, and design patterns.</p>
+  <div class="card-items">
+    <span class="card-tag">Boost</span>
+    <span class="card-tag">Eigen</span>
+    <span class="card-tag">CMake</span>
+    <span class="card-tag">Concurrency</span>
+    <span class="card-tag">Smart Ptr</span>
+  </div>
+</a>
+
+<a class="category-card" href="/codesnippet/docker/">
+  <h3>Web & Servers</h3>
+  <p>Containerization, message queues, web frameworks, and server implementations.</p>
+  <div class="card-items">
+    <span class="card-tag">Docker</span>
+    <span class="card-tag">RabbitMQ</span>
+    <span class="card-tag">Svelte</span>
+  </div>
+</a>
+
+<a class="category-card" href="/codesnippet/stm32/">
+  <h3>Embedded & Systems</h3>
+  <p>STM32 microcontrollers and Qt desktop applications for robotics.</p>
+  <div class="card-items">
+    <span class="card-tag">STM32</span>
+    <span class="card-tag">Qt</span>
+    <span class="card-tag">dVRK</span>
+  </div>
+</a>
+
+<a class="category-card" href="/codesnippet/git/">
+  <h3>Scripting & Tools</h3>
+  <p>Git workflows, Python patterns, Rust, shell scripting, and test automation.</p>
+  <div class="card-items">
+    <span class="card-tag">Git</span>
+    <span class="card-tag">Python</span>
+    <span class="card-tag">Rust</span>
+    <span class="card-tag">Shell</span>
+  </div>
+</a>
+
 ## Languages
 
-C, C++, Python, MATLAB, Rust, CMake, Shell, PowerShell, LaTeX, JavaScript/TypeScript
+<span class="badge">C</span>
+<span class="badge">C++</span>
+<span class="badge">Python</span>
+<span class="badge">MATLAB</span>
+<span class="badge">Rust</span>
+<span class="badge">CMake</span>
+<span class="badge">Shell</span>
+<span class="badge">PowerShell</span>
+<span class="badge">LaTeX</span>
+<span class="badge">TypeScript</span>
+
+## Quick Start
+
+```bash
+# Clone the repo
+git clone --recursive https://github.com/stevenleon99/triviaCode.git
+
+# Browse a topic
+cd triviaCode/python
+```

@@ -1,24 +1,27 @@
 ---
 title: Introduction
-description: A collection of code snippets across C, C++, Matlab, Python, CMake, Shell, PowerShell and more.
+description: Browse code snippets across multiple languages and domains.
 template: splash
 hero:
-  tagline: Browse code snippets across multiple languages and domains.
+  tagline: Choose a category to explore — from embedded systems to AI and everything in between.
   actions:
-    - text: Browse Snippets
+    - text: AI & ML
       link: /ai_model_deploy_test/
       icon: right-arrow
       variant: primary
-    - text: View on GitHub
-      link: https://github.com/stevenleon99/triviaCode
-      icon: external
+    - text: C/C++ Dev
+      link: /boost/
+      icon: right-arrow
+    - text: Git & Tools
+      link: /git/
+      icon: right-arrow
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
 ## Categories
 
-<CardGrid sy={3}>
+<CardGrid stagger>
   <Card title="AI & Machine Learning" icon="robot">
     AI model deployment, ML tools, reinforcement learning, and transformer implementations.
   </Card>
@@ -41,4 +44,13 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 ## Languages
 
-C, C++, Python, MATLAB, Rust, CMake, Shell, PowerShell, LaTeX, JavaScript/TypeScript
+<span class="badge">C</span>
+<span class="badge">C++</span>
+<span class="badge">Python</span>
+<span class="badge">MATLAB</span>
+<span class="badge">Rust</span>
+<span class="badge">CMake</span>
+<span class="badge">Shell</span>
+<span class="badge">PowerShell</span>
+<span class="badge">LaTeX</span>
+<span class="badge">TypeScript</span>

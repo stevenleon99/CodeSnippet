@@ -10,6 +10,11 @@ export default defineConfig({
 		starlight({
 			title: 'Code Snippets',
 			description: 'A collection of code snippets across C, C++, Matlab, Python, CMake, Shell, PowerShell and more.',
+			customCss: ['./src/styles/custom.css'],
+			components: {
+				Header: './src/components/Header.astro',
+				SocialIcons: './src/components/SocialIcons.astro',
+			},
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/stevenleon99/triviaCode' },
 			],
